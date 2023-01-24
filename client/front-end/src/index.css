@@ -10,7 +10,6 @@
   line-height: 24px;
   font-weight: 400;
   background-color: cornsilk;
-
 }
 
 body {
@@ -29,11 +28,15 @@ body {
 
   font-family: 'Shrikhand', cursive;
   font-size: 65px;
-  background: linear-gradient(rgb(7, 3, 98) -0.1%, rgb(179, 26, 132) 47.7%, rgb(239, 186, 83) 100.2%);
+  background: linear-gradient(
+    rgb(7, 3, 98) -0.1%,
+    rgb(179, 26, 132) 47.7%,
+    rgb(239, 186, 83) 100.2%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px #FFB600;
+  -webkit-text-stroke: 1px #ffb600;
 }
 
 .backlinks {
@@ -42,16 +45,18 @@ body {
   padding: 15px;
   font-family: 'Shrikhand', cursive;
   font-size: 25px;
-  
-  background: #6A00F4;
+
+  background: #6a00f4;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1.5px #FFB600;
+  -webkit-text-stroke: 1.5px #ffb600;
 }
 
 /* FORMS */
-.usepassforms, .newroutineform, .newactivityform {
+.usepassforms,
+.newroutineform,
+.newactivityform {
   /* OPT1 background-image: url('https://img.freepik.com/free-vector/psychedelic-groovy-background_23-2148860830.jpg'); */
   /* OPT2 background-color: #EFF1EA; */
   display: flex;
@@ -62,29 +67,31 @@ body {
   /* OPT 3 border: #FFB600 solid 5px; */
   /* OPT 3 border-radius: 10px; */
 
-  font-family: 'Press Start 2P', cursive;  
+  font-family: 'Press Start 2P', cursive;
 }
 
-.usepassforms input, .newroutineform input, .newactivityform input {
+.usepassforms input,
+.newroutineform input,
+.newactivityform input {
   font-family: 'Press Start 2P', cursive;
   font-size: 15px;
   margin: 10px;
   padding: 15px;
   width: 90%;
   text-align: center;
-  border: #FFB600 solid 3px;
+  border: #ffb600 solid 3px;
   border-radius: 10px;
-  
 }
 
 /* BUTTONS */
-.usepassforms button, .logoutbutton {
+.usepassforms button,
+.logoutbutton {
   font-size: 18px;
   margin: 25px;
   padding: 15px;
   width: 105%;
   text-align: center;
-  border: #FFB600 solid 3px;
+  border: #ffb600 solid 3px;
   border-radius: 10px;
   background-color: cornsilk;
 
@@ -100,56 +107,76 @@ body {
   transition-duration: 0.3s;
 }
 
-.usepassforms button:before, .logoutbutton:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 9px;
-    background: linear-gradient(148.2deg, rgb(247, 0, 0) -21.9%, rgb(164, 50, 237) 92.2%);
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: 0 50%;
-    transform-origin: 0 50%;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
+.usepassforms button:before,
+.logoutbutton:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 9px;
+  background: linear-gradient(
+    148.2deg,
+    rgb(247, 0, 0) -21.9%,
+    rgb(164, 50, 237) 92.2%
+  );
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 
-.usepassforms button:hover, .usepassforms button:focus, .usepassforms button:active, .logoutbutton:hover, .logoutbutton:focus, .logoutbutton:active {
-    color: white;
+.usepassforms button:hover,
+.usepassforms button:focus,
+.usepassforms button:active,
+.logoutbutton:hover,
+.logoutbutton:focus,
+.logoutbutton:active {
+  color: white;
 }
 
-.usepassforms button:hover:before, .usepassforms button:focus:before, .usepassforms button:active:before, .logoutbutton:hover:before, .logoutbutton:focus:before, .logoutbutton:active:before {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
+.usepassforms button:hover:before,
+.usepassforms button:focus:before,
+.usepassforms button:active:before,
+.logoutbutton:hover:before,
+.logoutbutton:focus:before,
+.logoutbutton:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .logoutbutton {
   width: 15%;
   margin: -7px;
   margin-left: auto;
-  font-family: 'Press Start 2P', cursive;  
+  font-family: 'Press Start 2P', cursive;
   border-color: #5c0099;
 }
 
 .logoutbutton:before {
-  background: linear-gradient(to right, rgb(198, 255, 221), rgb(251, 215, 134), rgb(247, 121, 125));
+  background: linear-gradient(
+    to right,
+    rgb(198, 255, 221),
+    rgb(251, 215, 134),
+    rgb(247, 121, 125)
+  );
 }
 
 .createbuttons {
   margin: 15px;
-  font-family: 'Press Start 2P', cursive;  
+  font-family: 'Press Start 2P', cursive;
   color: #fff;
   text-align: center;
 
-  border: #AB0061 solid 3px;
+  border: #ab0061 solid 3px;
   border-radius: 10px;
   background-color: cornsilk;
 }
@@ -172,65 +199,14 @@ body {
 
 /* HOME PAGE */
 .welcomecontainer {
-  background-image: url('https://www.history.com/.image/t_share/MTgwNTI1NjY5MTc0NzQ4MjQ4/jane-fonda-gettyimages-476609017.jpg');
+  background-image: url('http://cdn.cnn.com/cnnnext/dam/assets/200701111529-08-1980s-fashion-history-restricted.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
   position: relative;
   margin: 0 auto;
-  width: 200vh;
-  height: 130vh;
-}
-
-.welcomecontainer img {
-width: 200vh;
-height: 130vh;
-position:absolute;
-left: 0;
--webkit-transition: opacity 2s ease-in-out;
--moz-transition: opacity 2s ease-in-out;
--o-transition: opacity 2s ease-in-out;
-transition: opacity 2s ease-in-out;
-
-animation-name: fadeInOut;
-animation-timing-function: ease-in-out;
-animation-iteration-count: infinite;
-animation-duration: 20s;
-animation-direction: alternate;
-}
-
-@keyframes fadeInOut {
-  0% {
-  opacity:1;
-}
-0% {
-  opacity:1;
-}
-17% {
-  opacity:1;
-}
-25% {
-  opacity:0;
-}
-92% {
-  opacity:0;
-}
-100% {
-  opacity:1;
-}
-}
-
-.welcomecontainer img:nth-of-type(1) {
-animation-delay: 16s;
-}
-.welcomecontainer img:nth-of-type(2) {
-animation-delay: 12s;
-}
-.welcomecontainer img:nth-of-type(3) {
-animation-delay: 8s;
-}
-.welcomecontainer img:nth-of-type(4) {
-animation-delay: 4s;
+  width: 100%;
+  height: 100vh;
 }
 
 #welcome {
@@ -252,7 +228,15 @@ animation-delay: 4s;
   font-family: 'Titillium Web', sans-serif;
   font-style: italic;
 
-  background-image: -webkit-linear-gradient(#378DBC 0%, #B6E8F1 46%, #ffffff 50%, #32120E 54%, #FFC488 58%, #582C11 90%, #EC9B4E 100%);
+  background-image: -webkit-linear-gradient(
+    #378dbc 0%,
+    #b6e8f1 46%,
+    #ffffff 50%,
+    #32120e 54%,
+    #ffc488 58%,
+    #582c11 90%,
+    #ec9b4e 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -267,9 +251,9 @@ animation-delay: 4s;
 
   font-family: 'Mr Dafoe', cursive;
   font-size: 100px;
-  color: #F975F7 ;
+  color: #f975f7;
   letter-spacing: 6px;
-  transform:rotate(-6deg);
+  transform: rotate(-6deg);
   -webkit-text-stroke: 1px #f008b7;
   -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
   filter: drop-shadow(2px 2px 10px #f008b7);
@@ -283,11 +267,11 @@ animation-delay: 4s;
 
   font-family: 'Fascinate Inline', cursive;
   font-size: 33px;
-  color: #BC00DD;
-  -webkit-text-stroke: 1.5px #8900F2;
+  color: #bc00dd;
+  -webkit-text-stroke: 1.5px #8900f2;
 }
 
-#word:hover{
+#word:hover {
   -webkit-text-stroke: 1px #f008b7;
   -webkit-filter: drop-shadow(0px 0px 3px #f008b7);
   filter: drop-shadow(0px 0px 3px #f008b7);
@@ -300,8 +284,8 @@ animation-delay: 4s;
 
   font-family: 'Fascinate Inline', cursive;
   font-size: 33px;
-  color: #BC00DD;
-  -webkit-text-stroke: 1.5px #8900F2;
+  color: #bc00dd;
+  -webkit-text-stroke: 1.5px #8900f2;
 }
 
 .logpage {
@@ -330,18 +314,24 @@ animation-delay: 4s;
 
 /* ROUTACT CATCH-ALL */
 .routact-container {
-  background-color: #FFEBF9;
+  background-color: #ffebf9;
 }
 
 .routact {
-margin: 20px;
-margin-bottom: 0px;
+  margin: 20px;
+  margin-bottom: 0px;
 
-background: linear-gradient(179.2deg, rgb(34, 34, 34) 0%, rgb(8, 0, 153) 29.7%, rgb(118, 6, 166) 63.4%, rgba(233, 0, 64, 0.58) 100.1%);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
--webkit-text-stroke: 1px #fff;
+  background: linear-gradient(
+    179.2deg,
+    rgb(34, 34, 34) 0%,
+    rgb(8, 0, 153) 29.7%,
+    rgb(118, 6, 166) 63.4%,
+    rgba(233, 0, 64, 0.58) 100.1%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #fff;
 }
 
 .subtitle {
@@ -370,8 +360,8 @@ background-clip: text;
   font-size: 35px;
   font-style: italic;
   color: #fff;
-  text-shadow: -5px 5px 0px #F20089;
-  -webkit-text-stroke: 3px #AB0061;
+  text-shadow: -5px 5px 0px #f20089;
+  -webkit-text-stroke: 3px #ab0061;
 }
 
 .act-overlay {
@@ -381,11 +371,11 @@ background-clip: text;
   justify-content: center;
   border-radius: 10px;
 
-  background-color: #FFD7F4;
+  background-color: #ffd7f4;
   overflow: hidden;
   width: 100%;
   height: 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .activity:hover .act-overlay {
@@ -407,9 +397,9 @@ background-clip: text;
 .activity {
   width: 250px;
   height: 250px;
-  border: 5px solid #AB0061;
+  border: 5px solid #ab0061;
   border-radius: 10px;
-  background: linear-gradient(111.6deg, rgb(217, 111, 111) 0.4%, rgb(34, 14, 215) 100.3%);
+  background: rgb(181, 202, 182);
 }
 
 .creact {
@@ -423,22 +413,21 @@ background-clip: text;
   font-family: 'Press Start 2P', cursive;
   text-align: center;
   font-size: 25px;
-  
-  -webkit-text-stroke: 2.5px #AB0061;
+
+  -webkit-text-stroke: 2.5px #ab0061;
 }
 
-.cabcap, .cab {
+.cabcap,
+.cab {
   width: 50%;
 }
 
 /* SINGLE ROUTINES */
 .allrout {
   display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   margin: 20px;
-  width: 90%;
 }
 
 .rout-name {
@@ -449,88 +438,36 @@ background-clip: text;
   font-size: 35px;
   font-style: italic;
   color: #fff;
-  text-shadow: -5px 5px 0px #F20089;
-  -webkit-text-stroke: 3px #AB0061;
+  text-shadow: -5px 5px 0px #f20089;
+  -webkit-text-stroke: 3px #ab0061;
 }
 
 .rout-info {
-  line-height: 2;
-  color: #AB0061;
-  font-family: 'Press Start 2P', cursive;
+  /* line-height: 2; */
+  color: #ab0061;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 15px;
   font-style: none;
   text-shadow: none;
-}
-
-.rout-overlay {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  border: 5px solid #AB0061;
-  border-radius: 10px;
-
-  background-color: #FFD7F4;
-  /* overflow: hidden; */
-  position: relative;
-  right: -100px;
-  transition: 0.3s;
-  padding: 10px;
-  transition: .5s ease;
-}
-
-.act-incl {
-  writing-mode: vertical-lr;
-  text-orientation: upright;
-  color: #AB0061;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 23px;
-  padding: 13px;
-  border-right: 5px solid #AB0061;
-  font-style: none;
-  text-shadow: none;
-}
-
-.actrout {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #FFD7F4;
-  /* top: -50%;
-  left: 50%; */
-  -webkit-transform: translate(0%, 0%);
-  -ms-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
-  text-align: center;
-}
-
-#act-in-rout {
-  display: flex;
-  flex-flow: column wrap;
-  border-bottom: 5px solid #AB0061;
-  width: 100%;
-  line-height: 1.8;
-  writing-mode: horizontal-tb;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 15px;
 }
 
 .rout-desc {
   line-height: 2;
-  color: #AB0061;
-  font-family: 'Press Start 2P', cursive;
+  color: #ab0061;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 15px;
-  font-style: none;
-  text-shadow: none;
 }
 
 .routine {
-  width: 100%;
-  height: 450px;
-  padding: 15px;
-  background: linear-gradient(243.3deg, rgb(247, 164, 216) 35.7%, rgb(115, 102, 252) 121.6%);
-  border: 5px solid #AB0061;
+  /* width: 20rem;
+  height: 30rem; */
+  /* padding: 15px; */
+  background: linear-gradient(
+    243.3deg,
+    rgb(247, 164, 216) 35.7%,
+    rgb(115, 102, 252) 121.6%
+  );
+  border: 5px solid #ab0061;
   border-radius: 10px;
 }
 
@@ -539,29 +476,20 @@ background-clip: text;
   margin: 20px;
   margin-bottom: 0px;
 
-  background: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+  background: linear-gradient(
+    to top,
+    #fcc5e4 0%,
+    #fda34b 15%,
+    #ff7882 35%,
+    #c8699e 52%,
+    #7046aa 71%,
+    #0c1db8 87%,
+    #020f75 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px #fff;
-}
-
-.myrout-overlay {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  border: 5px solid #AB0061;
-  border-radius: 10px;
-  width: 40%;
-  background-color: #FFD7F4;
-  /* overflow: hidden; */
-  position: relative;
-  top: -280px;
-  right: -800px;
-  transition: 0.3s;
-  padding: 10px;
-  transition: .5s ease;
 }
 
 .crb {
@@ -569,15 +497,16 @@ background-clip: text;
   font-family: 'Press Start 2P', cursive;
   text-align: center;
   font-size: 25px;
-  -webkit-text-stroke: 2.5px #AB0061;
+  -webkit-text-stroke: 2.5px #ab0061;
 
-  border: #AB0061 solid 3px;
+  border: #ab0061 solid 3px;
   border-radius: 10px;
   background-color: cornsilk;
 }
 
 /* NEW ACT/ROUT PAGE */
-.newroutpage, .newactpage {
+.newroutpage,
+.newactpage {
   background-image: url('https://cdn.dribbble.com/users/13774/screenshots/5041932/media/943cf55e50910174f55394b58464eb90.png');
 
   display: flex;
@@ -588,7 +517,12 @@ background-clip: text;
 }
 
 .nrhead {
-  background: linear-gradient( rgb(69, 16, 129) 1.6%, rgb(154, 58, 127) 40.4%, rgb(242, 173, 78) 73.5%, rgb(250, 209, 152) 99.2%);
+  background: linear-gradient(
+    rgb(69, 16, 129) 1.6%,
+    rgb(154, 58, 127) 40.4%,
+    rgb(242, 173, 78) 73.5%,
+    rgb(250, 209, 152) 99.2%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -600,7 +534,7 @@ background-clip: text;
   font-family: 'Press Start 2P', cursive;
   text-align: center;
   font-size: 25px;
-  -webkit-text-stroke: 2.5px #AB0061;
+  -webkit-text-stroke: 2.5px #ab0061;
 
   display: flex;
   justify-content: baseline;
@@ -617,17 +551,21 @@ background-clip: text;
 .dash {
   margin: 0;
   padding: 10px;
-  background: linear-gradient(rgb(251, 250, 205) 24.4%, rgb(247, 163, 205) 53.7%, rgb(141, 66, 243) 99.2%);
+  background: linear-gradient(
+    rgb(251, 250, 205) 24.4%,
+    rgb(247, 163, 205) 53.7%,
+    rgb(141, 66, 243) 99.2%
+  );
 
   color: #fff;
   font-family: 'Press Start 2P', cursive;
   text-align: center;
   font-size: 30px;
-  -webkit-text-stroke: 2px #AB0061
+  -webkit-text-stroke: 2px #ab0061;
 }
 
 hr {
-  border: 3px solid #AB0061;
+  border: 3px solid #ab0061;
   margin: 0;
 }
 
@@ -635,11 +573,13 @@ hr {
   position: float;
   margin-top: 10px;
   background: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
-  border:#5c0099 3px solid;
+  border: #5c0099 3px solid;
   border-radius: 10px;
 }
 
-.sub, #accountinfo, #personalgoals {
+.sub,
+#accountinfo,
+#personalgoals {
   color: black;
   font-size: 15px;
   font-family: 'Press Start 2P', cursive;
@@ -651,26 +591,29 @@ hr {
   margin-right: 10px;
 }
 
-.per-in, .acc-in, .per-go, .spoti, .yt {
+.per-in,
+.acc-in,
+.per-go,
+.spoti,
+.yt {
   font-family: 'Shrikhand', cursive;
   letter-spacing: 5px;
   font-size: 35px;
-
 }
 
 #personalinfo {
- position: relative;
- display: flex;
- flex-direction: row;
- justify-content: space-evenly;
- align-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 /* NAV BARS */
 .publicnav {
   position: sticky; /* why this not work??*/
   background-image: url('https://img.freepik.com/premium-vector/seamless-pattern-fun-background-hipster-style-80s-90s_160081-1039.jpg');
-  border-bottom: solid 10px #E500A4;
+  border-bottom: solid 10px #e500a4;
   padding: 20px;
 
   display: flex;
@@ -690,9 +633,9 @@ hr {
   font-size: 40px;
   font-weight: bolder;
   text-decoration: none;
-  color: #FFB600;
+  color: #ffb600;
 
-  -webkit-text-stroke: 1.5px #AB0061;
+  -webkit-text-stroke: 1.5px #ab0061;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   -webkit-transition-duration: 0.3s;
@@ -709,12 +652,16 @@ hr {
   transition-property: transform;
 }
 
-.navlink:hover, .navlink:focus, .navlink:active {
+.navlink:hover,
+.navlink:focus,
+.navlink:active {
   -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
 }
 
-.navlink:hover:before, .navlink:focus:before, .navlink:active:before {
+.navlink:hover:before,
+.navlink:focus:before,
+.navlink:active:before {
   -webkit-transform: translateY(10px);
   transform: translateY(10px);
 }
@@ -722,7 +669,7 @@ hr {
 .mynav {
   position: sticky; /* why this not work??*/
   background-image: url('https://img.freepik.com/free-vector/psychedelic-groovy-background_23-2148860830.jpg?w=2000');
-  border-bottom: solid 10px #FFB600;
+  border-bottom: solid 10px #ffb600;
   padding: 20px;
 
   display: flex;
@@ -737,7 +684,7 @@ hr {
 .fitnesshome {
   font-family: 'Mr Dafoe', cursive;
   font-size: 65px;
-  color: #F975F7 ;
+  color: #f975f7;
   font-weight: lighter;
   letter-spacing: 6px;
   -webkit-text-stroke: 3px #f008b7;
@@ -757,11 +704,10 @@ hr {
   box-shadow: none;
 }
 
-
 /* TO DELETE */
 button {
   border-radius: 8px;
-  border: 3px solid #AB0061;
+  border: 3px solid #ab0061;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
@@ -774,11 +720,11 @@ button {
 #myroutine {
   padding: 15pt;
   border: 1px solid white;
-  margin: 5pt
+  margin: 5pt;
 }
 
-#myroutineActivity{
+#myroutineActivity {
   border: rgb(250, 248, 248) 1pt solid;
   padding: 5pt;
-  margin: 5pt
+  margin: 5pt;
 }
