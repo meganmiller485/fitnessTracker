@@ -20,7 +20,7 @@ body {
 /********** MULTI-PAGE STYLES **********/
 /* HEADERS/SUBHEADERS */
 .headers {
-  margin: 0;
+  margin-top: 2rem;
   padding: 25px;
 
   display: flex;
@@ -170,7 +170,7 @@ body {
   );
 }
 
-.createbuttons {
+/* .createbuttons {
   margin: 15px;
   font-family: 'Press Start 2P', cursive;
   color: #fff;
@@ -179,34 +179,71 @@ body {
   border: #ab0061 solid 3px;
   border-radius: 10px;
   background-color: cornsilk;
-}
-
-/* BOXES */
-.single {
-  position: relative;
-  width: 100%;
-  border: 5px solid black;
-  margin: 5px;
-  padding: 15px;
-
-  display: flex;
-  flex-flow: column wrap;
-  align-items: baseline;
-  justify-content: center;
-}
+} */
 
 /********** PAGE-SPECIFIC STYLES **********/
 
 /* HOME PAGE */
 .welcomecontainer {
-  background-image: url('http://cdn.cnn.com/cnnnext/dam/assets/200701111529-08-1980s-fashion-history-restricted.jpg');
+  background-image: url('https://www.history.com/.image/t_share/MTgwNTI1NjY5MTc0NzQ4MjQ4/jane-fonda-gettyimages-476609017.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
   position: relative;
   margin: 0 auto;
-  width: 100%;
-  height: 100vh;
+  width: 200vh;
+  height: 130vh;
+}
+
+.welcomecontainer img {
+  width: 200vh;
+  height: 130vh;
+  position: absolute;
+  left: 0;
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+
+  animation-name: fadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 20s;
+  animation-direction: alternate;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.welcomecontainer img:nth-of-type(1) {
+  animation-delay: 16s;
+}
+.welcomecontainer img:nth-of-type(2) {
+  animation-delay: 12s;
+}
+.welcomecontainer img:nth-of-type(3) {
+  animation-delay: 8s;
+}
+.welcomecontainer img:nth-of-type(4) {
+  animation-delay: 4s;
 }
 
 #welcome {
@@ -312,94 +349,145 @@ body {
 
 /* PUBLIC ROUTINES/ACTIVITIES PAGE */
 
-/* ROUTACT CATCH-ALL */
-.routact-container {
-  background-color: #ffebf9;
-}
-
-.routact {
-  margin: 20px;
-  margin-bottom: 0px;
-
-  background: linear-gradient(
-    179.2deg,
-    rgb(34, 34, 34) 0%,
-    rgb(8, 0, 153) 29.7%,
-    rgb(118, 6, 166) 63.4%,
-    rgba(233, 0, 64, 0.58) 100.1%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px #fff;
-}
-
 .subtitle {
   text-align: center;
   margin-top: 5px;
   font-family: 'Press Start 2P', cursive;
 }
 
-/* SINGLE ACTIVITIES */
-.allact {
+.allroutines {
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
   margin: 20px;
   width: 90%;
 }
 
-.act-name {
-  line-height: 1;
-  width: 0;
-
-  letter-spacing: 5px;
-  text-align: left;
-  font-family: 'Candal', sans-serif;
-  font-size: 35px;
-  font-style: italic;
-  color: #fff;
-  text-shadow: -5px 5px 0px #f20089;
-  -webkit-text-stroke: 3px #ab0061;
+.single-routine {
+  padding: 1rem;
+  min-width: 24rem;
+  max-width: 24rem;
+  background-color: white;
+  box-shadow: 0 0 1em rgb(232, 218, 162);
 }
 
-.act-overlay {
+.rout-name {
+  font-size: 24pt;
+  padding: 1rem;
+  text-align: center;
+}
+
+.routine-title {
+  color: orange;
+}
+
+.isPublic {
+  color: green;
+}
+
+.act-incl {
+  text-align: center;
+  color: rgb(133, 131, 131);
+}
+
+#act-in-rout {
+  padding: 1rem;
+  margin: 1.5rem;
+  box-shadow: 0 0 1em rgb(237, 170, 239);
+}
+
+#activity-name {
+  color: orange;
+}
+
+/* MY ROUTINES */
+
+.allmyroutines {
   display: flex;
-  flex-flow: column wrap;
-  align-items: center;
   justify-content: center;
-  border-radius: 10px;
-
-  background-color: #ffd7f4;
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  transition: 0.5s ease;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 20px;
+  width: 90%;
 }
 
-.activity:hover .act-overlay {
-  height: 100%;
+.single-myroutine {
+  padding: 1rem;
+  min-width: 24rem;
+  max-width: 24rem;
+  background-color: white;
+  box-shadow: 0 0 1em rgb(232, 218, 162);
+}
+
+.myroutine-name {
+  font-size: 24pt;
+  padding: 1rem;
+  text-align: center;
+}
+
+#addacttoroutbutton {
+  cursor: pointer;
+  color: rgb(173, 74, 163);
+}
+
+#addSquatstoyourrout {
+  text-align: center;
+}
+
+#activity-word {
+  color: orange;
+}
+
+#addacttoroutbutton2 {
+  cursor: pointer;
+  color: rgb(173, 74, 163);
+}
+
+.addactform {
+  margin-bottom: 1rem;
+}
+
+.listOfAct {
+  list-style-type: none;
+  margin: 0.5rem;
+}
+
+#selectActButton {
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+/* SINGLE ACTIVITIES */
+
+.createActButton {
+  padding: 1rem;
+}
+.allact {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 20px;
+  width: 90%;
+}
+
+.single-activity {
+  padding: 1rem;
+  min-width: 24rem;
+  max-width: 24rem;
+  background-color: white;
+  box-shadow: 0 0 1em rgb(232, 218, 162);
+}
+.act-name {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+
+  font-size: 20pt;
 }
 
 .act-desc {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 15px;
-  top: 50%;
-  left: -50%;
-  -webkit-transform: translate(0%, 0%);
-  -ms-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
-  text-align: center;
-  align-items: center;
-}
-
-.activity {
-  width: 250px;
-  height: 250px;
-  border: 5px solid #ab0061;
-  border-radius: 10px;
-  background: rgb(181, 202, 182);
+  color: #b90c8e;
 }
 
 .creact {
@@ -409,99 +497,10 @@ body {
   width: 85%;
   padding-left: 3%;
   padding-right: 10%;
-  color: #fff;
+  color: #f3b12e;
   font-family: 'Press Start 2P', cursive;
   text-align: center;
   font-size: 25px;
-
-  -webkit-text-stroke: 2.5px #ab0061;
-}
-
-.cabcap,
-.cab {
-  width: 50%;
-}
-
-/* SINGLE ROUTINES */
-.allrout {
-  display: flex;
-  /* justify-content: center;
-  align-items: center; */
-  margin: 20px;
-}
-
-.rout-name {
-  line-height: 2.5;
-  letter-spacing: 5px;
-  text-align: left;
-  font-family: 'Candal', sans-serif;
-  font-size: 35px;
-  font-style: italic;
-  color: #fff;
-  text-shadow: -5px 5px 0px #f20089;
-  -webkit-text-stroke: 3px #ab0061;
-}
-
-.rout-info {
-  /* line-height: 2; */
-  color: #ab0061;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 15px;
-  font-style: none;
-  text-shadow: none;
-}
-
-.rout-desc {
-  line-height: 2;
-  color: #ab0061;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 15px;
-}
-
-.routine {
-  /* width: 20rem;
-  height: 30rem; */
-  /* padding: 15px; */
-  background: linear-gradient(
-    243.3deg,
-    rgb(247, 164, 216) 35.7%,
-    rgb(115, 102, 252) 121.6%
-  );
-  border: 5px solid #ab0061;
-  border-radius: 10px;
-}
-
-/* MY ROUTINES */
-.userrout {
-  margin: 20px;
-  margin-bottom: 0px;
-
-  background: linear-gradient(
-    to top,
-    #fcc5e4 0%,
-    #fda34b 15%,
-    #ff7882 35%,
-    #c8699e 52%,
-    #7046aa 71%,
-    #0c1db8 87%,
-    #020f75 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px #fff;
-}
-
-.crb {
-  color: #fff;
-  font-family: 'Press Start 2P', cursive;
-  text-align: center;
-  font-size: 25px;
-  -webkit-text-stroke: 2.5px #ab0061;
-
-  border: #ab0061 solid 3px;
-  border-radius: 10px;
-  background-color: cornsilk;
 }
 
 /* NEW ACT/ROUT PAGE */
@@ -705,7 +704,7 @@ hr {
 }
 
 /* TO DELETE */
-button {
+/* button {
   border-radius: 8px;
   border: 3px solid #ab0061;
   padding: 0.6em 1.2em;
@@ -715,16 +714,16 @@ button {
   background-color: cornsilk;
   cursor: pointer;
   transition: border-color 0.25s;
-}
+} */
 
-#myroutine {
+/* #myroutine {
   padding: 15pt;
   border: 1px solid white;
   margin: 5pt;
-}
+} */
 
-#myroutineActivity {
+/* #myroutineActivity {
   border: rgb(250, 248, 248) 1pt solid;
   padding: 5pt;
   margin: 5pt;
-}
+} */

@@ -43,33 +43,38 @@ const MyRoutines = ({
         </button>
       </p>
 
-      <div className='allrout myroutines'>
+      <div className='allmyroutines'>
         {allRoutines.map((routine) => {
           if (routine.creatorId === user.id) {
             const routineId = routine.id;
             // console.log("ID HERE", routineId)
             return (
               <div
-                className='routine myrout'
+                className='single-myroutine'
                 key={routine.id}
               >
-                <div className='rout-name'>{routine.name}</div>
+                <div className='myroutine-name'>{routine.name}</div>
                 <div className='rout-info'>
-                  <div>GOAL:{routine.goal}</div>
                   <div>
-                    CREATOR:
+                    <b>GOAL:</b> <br />
+                    {routine.goal}
+                  </div>
+                  <div>
+                    <b>CREATOR:</b> <br />
                     {routine.creatorName}
                   </div>
                   <div>
                     {routine.isPublic}
                     <p>
-                      <b>{routine.isPublic ? 'PUBLIC' : 'NOT PUBLIC'}</b>
+                      <b className='isPublic'>
+                        {routine.isPublic ? 'PUBLIC' : 'NOT PUBLIC'}
+                      </b>
                     </p>
                   </div>
                 </div>
-                <div>
+                <div className='fullMyRoutine'>
                   <b className='act-incl'>ACTIVITIES INCLUDE</b>
-                  {/* <div className="myrout-overlay actrout"> */}
+
                   {routine.activities &&
                     routine.activities.map((activity) => {
                       const actId = activity.routineActivityId;
@@ -78,23 +83,20 @@ const MyRoutines = ({
                         return ' No activities here';
                       } else {
                         return (
-                          <div id='act-in-rout myr'>
-                            <div
-                              key={activity.id}
-                              className='rout-desc myr'
-                            >
+                          <div id='act-in-rout'>
+                            <div key={activity.id}>
                               <div className='rout-desc myr'>
-                                <b>{activity.name}</b>
+                                <div id='activity-name'>{activity.name}</div>
                               </div>
-                              <b>DESCRIPTION:</b>
+                              <b id='activity-title'>Description:</b>
                               <div className='rout-desc'>
                                 {activity.description}
                               </div>
                               <div className='rout-desc myr'>
-                                <b>DURATION:</b> {activity.duration}
+                                <b>Sets:</b> {activity.duration}
                               </div>
                               <div className='rout-desc myr'>
-                                <b>COUNT:</b> {activity.count}
+                                <b>Reps:</b> {activity.count}
                               </div>
                               <DeleteAct
                                 className='rout-desc myr'
